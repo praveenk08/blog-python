@@ -1,0 +1,135 @@
+
+      {% extends 'base.html' %}
+{% load static %}
+{% block title %} Contacts 2{% endblock title %}
+
+{% block body %} 
+      
+            <div class="page-content-wrap">
+
+                <header class="rich-header page-header version1" data-parallax="true" id="header_0a29_0">
+                    <div class="parallax-container" id="div_0a29_0">&nbsp;</div>
+                    <div class="container nz-clearfix">
+
+                        <div class="rh-content">
+                            <h1 >Contacts 2</h1>
+                            <div class="rh-separator">&nbsp;</div>
+                            <div id="div_0a29_1" class="nz-breadcrumbs nz-clearfix"><a href="index.html"  property="v:title">Home</a><span class="current">Contacts 2</span></div>
+                        </div>
+
+                    </div>
+                    <div id="slider-arrow" data-target="#nz-content" data-from="90" data-offset="90" class="i-separator animate nz-clearfix"></div>
+                </header>
+                <!-- content start -->
+
+
+                <div id="nz-content" class='content nz-clearfix padding-false'>
+                    <div class='container page-full-width'>
+                        <!-- post start -->
+                        <div id="post-4325" class="post-4325 page type-page status-publish hentry">
+                            <section class="page-content nz-clearfix">
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-false " data-animation-speed="35000" data-parallax="false" id="div_0a29_2">
+                                    <div class="container">
+                                        <div class="nz-row">
+                                            <div class="col vc_col-sm-12 col12  element-animate-false valign-top"  data-effect="none" data-align="left" data-margin="false">
+                                                <div class="col-inner" >
+                                                    <div class="map" id="gmap-1" data-animate="false" data-x="53.339381" data-y="-6.260405" data-type="terrain" data-zoom="16" data-marker="upload/marker.png" ></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-false " data-animation-speed="35000" data-parallax="false" id="div_0a29_3">
+                                    <div class="container">
+                                        <div class="nz-row">
+                                            <div class="col vc_col-sm-12 vc_col-lg-3 vc_col-md-2 vc_col-xs-12 col12  element-animate-false valign-top"  data-effect="none" data-align="center" data-margin="false">
+                                                <div class="col-inner" ></div>
+                                            </div>
+                                            <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-8 vc_col-xs-12 col12  element-animate-false valign-top"  data-effect="none" data-align="left" data-margin="false">
+                                                <div class="col-inner" >
+                                                    <h3 id="h3_0a29_0" class="vc_custom_heading ninzio-latter-spacing">CONTACT US</h3>
+                                                    <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                                                        <div class="nz-separator solid" id="div_0a29_4">&nbsp;</div>
+                                                    </div>
+                                                    <div  class="nz-column-text nz-clearfix no-padding element-animate-false" data-effect="none" data-effect-speed="50">
+                                                        
+                                                        <p id="p_0a29_0"><span id="span_0a29_0">Capitalise on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs.</span></p>
+                                                        <p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col vc_col-sm-12 vc_col-lg-3 vc_col-md-2 vc_col-xs-12 col12  element-animate-false valign-top"  data-effect="none" data-align="left" data-margin="false">
+                                                <div class="col-inner" ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-false " data-animation-speed="35000" data-parallax="false" id="div_0a29_5">
+                                    <div class="container">
+                                        <div class="nz-row">
+                                            <div class="col vc_col-sm-12 col12  element-animate-false valign-top"  data-effect="none" data-align="center">
+                                                <div class="col-inner" >
+                                                    <div role="form" class="wpcf7" id="wpcf7-f4283-p4325-o1" lang="en-US" dir="ltr">
+                                                        <div class="screen-reader-response"></div>
+
+                                                        {% for message in messages %}
+                                                         <div class="alert {{ message.tags }}">
+                                                            <div class="alert-message">{{ message }}
+                                                            </div><span class="close-alert">X</span>
+                                                         </div>
+                                                         {% endfor %}
+
+                                                        <form id="contact-form" action="/contact/" method="post">
+                                                            {% csrf_token %}
+                                                            <div class="col col4" data-margin="true"><span class="wpcf7-form-control-wrap your-name">
+                                                                <input name="name" id="name" type="text" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Name" /></span></div>
+                                                            <div class="col col4" data-margin="true"><span class="wpcf7-form-control-wrap your-email">
+                                                                <input name="mail" id="mail" type="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="E-mail" /></span></div>
+                                                            <div class="col col4" data-margin="true"><span class="wpcf7-form-control-wrap your-subject">
+                                                                <input name="phone" id="phone" type="text" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Phone" /></span></div>
+                                                            <div class="col col12" data-margin="true"><span class="wpcf7-form-control-wrap your-message">
+                                                                 <textarea name="comment" id="comment"  cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea></span></div>
+                                                            <div class="col col12">
+                                                                <input type="submit" value="Send MEssage"  id="submit_contactddd">
+                                    
+                                                                <div id="msg" class="message"></div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-false " data-animation-speed="35000" data-parallax="false" id="div_0a29_6">
+                                    <div class="container">
+                                        <div class="nz-row">
+                                            <div class="col vc_col-sm-4 col4  element-animate-false valign-top"  data-effect="none" data-align="center">
+                                                <div class="col-inner" ><span class="nz-icon circle large icon-phone animate-false" id="span_0a29_1"></span>
+                                                    <div class='gap nz-clearfix' id="div_0a29_7">&nbsp;</div>
+                                                    <div  class="nz-column-text nz-clearfix  element-animate-false" data-effect="none" data-effect-speed="50"><span id="span_0a29_2">8 (200) 800 &#8211; 2000 &#8211; 600</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="col vc_col-sm-4 col4  element-animate-false valign-top"  data-effect="none" data-align="center">
+                                                <div class="col-inner" ><span class="nz-icon circle large icon-envelope animate-false" id="span_0a29_3"></span>
+                                                    <div class='gap nz-clearfix' id="div_0a29_8">&nbsp;</div>
+                                                    <div  class="nz-column-text nz-clearfix  element-animate-false" data-effect="none" data-effect-speed="50"><span id="span_0a29_4">NINZIO@SUPPORT.COM</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="col vc_col-sm-4 col4  element-animate-false valign-top"  data-effect="none" data-align="center">
+                                                <div class="col-inner" ><span class="nz-icon circle large icon-location2 animate-false" id="span_0a29_5"></span>
+                                                    <div class='gap nz-clearfix' id="div_0a29_9">&nbsp;</div>
+                                                    <div  class="nz-column-text nz-clearfix  element-animate-false" data-effect="none" data-effect-speed="50"><span id="span_0a29_6">PARIS, NORTH ST. 25</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!-- post end -->
+                    </div>
+                </div>
+                <!-- content end -->
+
+         {% endblock body %}
